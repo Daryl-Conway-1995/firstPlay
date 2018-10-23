@@ -13,6 +13,10 @@ class Application extends Controller {
     Ok(views.html.test(name))
   }
 
+  def testNum(number:Int) = Action {
+    Ok(views.html.test(number.toString))
+  }
+
   def testRedirect = Action { implicit request: Request[AnyContent] =>    Redirect(routes.Application.test("Bob"))  }
 
 }

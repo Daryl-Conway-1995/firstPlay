@@ -3,13 +3,16 @@
 # ~~~~
 
 # Home page
-GET        /                    controllers.Application.index
+GET        /                       controllers.Application.index
 
 #test page
-GET        /test/:name          controllers.Application.test(name : String)
+GET        /test/:name             controllers.Application.test(name : String)
+
+#test with numbers
+GET        /testNum/:number        controllers.Application.testNum(number : Int)
 
 #test redirection
-GET       /bob                  controllers.Application.testRedirect
+GET        /bob                    controllers.Application.testRedirect
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file        controllers.Assets.at(path="/public", file)
+GET        /assets/*file           controllers.Assets.at(path="/public", file)
